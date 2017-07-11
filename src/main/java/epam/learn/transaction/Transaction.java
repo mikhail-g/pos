@@ -5,15 +5,18 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-/**
- * Created by Mykhailo on 010 10.07.17.
- */
+import epam.learn.product.ProductDefinition;
+
 public interface Transaction {
 
     LocalDate getDate();
+
     LocalTime getTime();
+
     BigDecimal getTotal();
-    void addTransactionItem(TransactionItem transactionItem);
+
+    void addTransactionItem(ProductDefinition product, Integer quantity);
+
     List<TransactionItem> getTransactionItems();
 
 }

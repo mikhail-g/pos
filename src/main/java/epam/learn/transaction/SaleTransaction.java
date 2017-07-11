@@ -4,12 +4,10 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
-/**
- * Created by Mykhailo on 010 10.07.17.
- */
+import epam.learn.product.ProductDefinition;
+
 public class SaleTransaction implements Transaction {
 
     private LocalDate date;
@@ -38,8 +36,8 @@ public class SaleTransaction implements Transaction {
     }
 
     @Override
-    public void addTransactionItem(TransactionItem transactionItem) {
-        items.add(transactionItem);
+    public void addTransactionItem(ProductDefinition product, Integer quantity) {
+        items.add(new SaleTransactionItem(product, quantity));
     }
 
     @Override

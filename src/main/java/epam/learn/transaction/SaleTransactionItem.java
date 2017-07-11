@@ -1,18 +1,15 @@
 package epam.learn.transaction;
 
-import epam.learn.product.ProductDefinition;
-
 import java.math.BigDecimal;
 
-/**
- * Created by Mykhailo on 010 10.07.17.
- */
-public class SaleTransactionItem implements TransactionItem{
+import epam.learn.product.ProductDefinition;
+
+public class SaleTransactionItem implements TransactionItem {
 
     private Integer quantity;
     private ProductDefinition product;
 
-    public SaleTransactionItem(ProductDefinition product, Integer quantity) {
+    SaleTransactionItem(ProductDefinition product, Integer quantity) {
         this.quantity = quantity;
         this.product = product;
     }
